@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MatchFrameLayout">
+        <attr name="mfl_targetId" format="reference" />
+        <attr name="mfl_removeHeight" format="dimension|reference" />
+    </declare-styleable>
+</resources>

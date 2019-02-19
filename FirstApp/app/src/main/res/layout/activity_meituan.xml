@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.example.firstapp.widget.detailView.DetailScrollView
+        android:id="@+id/main_SvFirst"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/view_main_header"
+                android:id="@+id/tab_viewPager_HeaderView"
+                />
+            <android.support.design.widget.TabLayout
+                android:id="@+id/main_TabLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabIndicatorColor="@color/colorAccent"
+                android:background="#ffffff"
+                app:tabMode="fixed"
+                app:tabIndicatorHeight="3dp"
+                app:tabSelectedTextColor="#000"
+                app:tabTextColor="#5b5b5b">
+            </android.support.design.widget.TabLayout>
+
+
+            <com.example.firstapp.widget.detailView.MatchFrameLayout
+                android:id="@+id/main_FlMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:mfl_targetId="@id/main_TabLayout" >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/list_RecyclerView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+            </com.example.firstapp.widget.detailView.MatchFrameLayout>
+
+
+        </LinearLayout>
+    </com.example.firstapp.widget.detailView.DetailScrollView>
+</LinearLayout>
